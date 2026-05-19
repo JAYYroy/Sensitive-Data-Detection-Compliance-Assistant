@@ -3,7 +3,7 @@
 
 This is an AI-powered Streamlit application that analyzes uploaded documents (PDF, TXT, CSV) to detect sensitive and confidential information, classify risks, generate compliance summaries, and allow users to query the document using natural language.
 
-## Links (MANDATORY)
+## Links 
 *   **GitHub Repository Link:** [Insert Link Here]
 *   **Demo Video (2–5 minutes):** [Insert Link Here]
 *   **Working Prototype Deployment Link:** [Insert Link Here]
@@ -15,7 +15,7 @@ This is an AI-powered Streamlit application that analyzes uploaded documents (PD
 4. **Risk Classification & Compliance Summary**: Leverages Gemini AI to classify document risk (Low, Medium, High) and provide compliance observations/remediation steps.
 5. **Question Answering**: Uses Gemini AI to let users chat with their document.
 
-## Setup Instructions (MANDATORY)
+## Setup Instructions 
 
 ### Prerequisites
 *   Python 3.8+
@@ -44,7 +44,7 @@ This is an AI-powered Streamlit application that analyzes uploaded documents (PD
    streamlit run app.py
    ```
 
-## Architecture Overview (MANDATORY)
+## Architecture Overview 
 
 The application follows a simple, monolithic architecture built on Streamlit:
 *   **Frontend (UI)**: Built with `streamlit`, providing an interactive interface for file uploads, displaying results, and chatting.
@@ -55,19 +55,19 @@ The application follows a simple, monolithic architecture built on Streamlit:
 *   **Detection Engine**: Python `re` module (Regular Expressions) to find PII (Personally Identifiable Information) and other confidential strings.
 *   **AI Engine**: Integrates with `google-generativeai` (Gemini-1.5-flash) via API to process the document text alongside structured prompts for summarization and Q&A.
 
-## AI/ML Approach Used (MANDATORY)
+## AI/ML Approach Used 
 
 The project uses a hybrid approach for efficiency and accuracy:
 1.  **Rule-based Matching (Regex)**: For highly structured and standardized data (like Aadhaar numbers, PAN cards, Emails, Credit Cards), Regular Expressions provide the fastest and most accurate deterministic approach without the token cost or latency of an LLM.
 2.  **Generative AI (LLMs)**: For complex, context-dependent tasks like risk classification, generating comprehensive compliance summaries, and natural language Q&A, the application utilizes the **Google Gemini 1.5 Flash** model. We use prompt engineering to instruct the model to act as a compliance expert. The document text is injected directly into the prompt context (context window permitting) to ground the model's responses.
 
-## Challenges Faced (MANDATORY)
+## Challenges Faced 
 
 *   **Context Window Limits**: Extremely large PDFs or CSVs might exceed the context window token limits of the LLM. The current implementation truncates very large text to the first 10,000 characters as a basic mitigation, which might miss data at the end of large files.
 *   **Regex Limitations**: While Regex is fast, it can produce false positives (e.g., a 10-digit part number being flagged as a phone number) or false negatives for poorly formatted text.
 *   **File Parsing**: Extracting clean, readable text from complex PDFs (e.g., those with tables, images, or non-standard encodings) is challenging using simple libraries like `PyPDF2`.
 
-## Future Improvements (MANDATORY)
+## Future Improvements 
 
 *   **RAG Implementation (Retrieval-Augmented Generation)**: Integrate ChromaDB or FAISS to chunk and vectorize large documents. This would solve the context window limit and improve Q&A accuracy for massive files.
 *   **OCR Support**: Integrate `pytesseract` or similar libraries to extract text from scanned PDFs and images.
