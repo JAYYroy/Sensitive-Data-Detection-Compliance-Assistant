@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sensitive Data Detection & Compliance Assistant
 
 This is an AI-powered Streamlit application that analyzes uploaded documents (PDF, TXT, CSV) to detect sensitive and confidential information, classify risks, generate compliance summaries, and allow users to query the document using natural language.
@@ -73,3 +74,6 @@ The project uses a hybrid approach for efficiency and accuracy:
 *   **Advanced NLP for Detection**: Replace or augment Regex with Named Entity Recognition (NER) models (like `spaCy` or `Transformers`) to detect context-sensitive entities (e.g., distinguishing a person's name from a street name).
 *   **Multi-Document Support**: Allow users to upload a batch of documents and perform cross-document risk analysis.
 *   **Authentication & Audit Logging**: Add user login and tracking to see who uploaded what document and what risks were identified, storing this in a database for compliance tracking.
+=======
+# Sensitive-Data-Detection-Compliance-Assistant
+>>>>>>> 590da4b4639ff3c0347061185bbe4374d657df1a
