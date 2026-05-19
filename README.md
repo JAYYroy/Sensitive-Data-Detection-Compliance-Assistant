@@ -3,11 +3,6 @@
 
 This is an AI-powered Streamlit application that analyzes uploaded documents (PDF, TXT, CSV) to detect sensitive and confidential information, classify risks, generate compliance summaries, and allow users to query the document using natural language.
 
-## Links 
-*   **GitHub Repository Link:** [Insert Link Here]
-*   **Demo Video (2–5 minutes):** [Insert Link Here]
-*   **Working Prototype Deployment Link:** [Insert Link Here]
-
 ## Features
 1. **Document Upload**: Supports PDF, TXT, and CSV file formats.
 2. **Sensitive Data Detection**: Uses Regex to detect Aadhaar, PAN, Emails, Phones, Credit Cards, Bank Accounts (IFSC), Passwords/API Keys, and Employee IDs.
