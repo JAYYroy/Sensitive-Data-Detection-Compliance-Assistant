@@ -72,7 +72,7 @@ def mask_sensitive_data(text, detected_data):
 def call_gemini_api(prompt):
     """Calls Gemini API directly using REST."""
     api_key = os.environ.get("GEMINI_API_KEY")
-    url = f"https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key={api_key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
     data = {
         "contents": [{"parts": [{"text": prompt}]}]
     }
