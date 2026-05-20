@@ -1,7 +1,11 @@
-Sensitive Data Detection & Compliance Assistant
+Sensitive Data Detection & Compliance Assistant:
+
+
 A Streamlit-based web app that scans uploaded documents for sensitive information, classifies risk levels, and lets you ask questions about the document using AI.
 Built this as part of an internship assignment. The idea was to combine regex-based detection for structured data (like Aadhaar, PAN) with an LLM for the more contextual stuff like risk summaries and Q&A.
+
 Live Demo: https://sensitive-data-detection-compliance-assistant-nj6uszmnushegfiw.streamlit.app
+
 GitHub: https://github.com/JAYYroy/Sensitive-Data-Detection-Compliance-Assistant
 
 
