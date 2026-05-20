@@ -23,8 +23,8 @@ def setup_gemini(api_key):
 
 def get_gemini_model():
     """Returns the Gemini model."""
-    # Using gemini-1.5-flash as it's the recommended default for general text tasks
-    return genai.GenerativeModel('gemini-1.5-flash')
+    # Using ggemini-2.0-flash as it's the recommended default for general text tasks
+    return genai.GenerativeModel('ggemini-2.0-flash')
 
 def extract_text_from_file(uploaded_file):
     """Extracts text from uploaded PDF, TXT, or CSV file."""
