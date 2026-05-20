@@ -20,11 +20,10 @@ PATTERNS = {
 def setup_gemini(api_key):
     """Initializes Gemini API."""
     genai.configure(api_key=api_key)
-
+    
 def get_gemini_model():
     """Returns the Gemini model."""
-    # Using gemini-2.0-flash as it's the recommended default for general text tasks
-    return genai.GenerativeModel('gemini-1.5-flash')
+    return genai.GenerativeModel('models/gemini-1.5-flash')
 
 def extract_text_from_file(uploaded_file):
     """Extracts text from uploaded PDF, TXT, or CSV file."""
