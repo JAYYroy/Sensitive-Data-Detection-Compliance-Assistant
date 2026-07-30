@@ -17,7 +17,7 @@ API_KEY = os.getenv("GEMINI_API_KEY")
 st.set_page_config(page_title="Sensitive Data Detection & Compliance Assistant", layout="wide")
 
 def main():
-    st.title("🛡️ Sensitive Data Detection & Compliance Assistant")
+    st.title("Secure AI Compliance Shield")
     st.markdown("Upload a document (PDF, TXT, CSV) to detect sensitive information, classify risks, and generate compliance summaries.")
 
     if not API_KEY or API_KEY == "your_gemini_api_key_here":
